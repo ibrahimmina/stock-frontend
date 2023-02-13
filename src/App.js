@@ -11,15 +11,16 @@ import Login from "./components/auth/Login";
 class App extends Component {
   render() {
     return (
-      
-        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-          <Navbar />
-          <Route exact path="/" component={Landing} />
-          <Route exact path="/register" component={Register} />
-          <Route exact path="/login" component={Login} />
-          <Footer />
+      <Router>
+          <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+            <Navbar />
+            <Route exact path="/" component={Landing} />
+            <Route exact path="/register" component={Register} />
+            <Route exact path="/login" component={Login} />
+            <Footer />
 
-        </div>
+          </div>
+        </Router>
     );
   }
 }
